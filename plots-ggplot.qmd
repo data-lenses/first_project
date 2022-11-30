@@ -26,15 +26,39 @@ ci_np <- read_excel(here("data", "ci_np.xlsx"))
 gg_base <- ggplot(data = ci_np, aes(x = year, y = visitors))
 
 gg_base +
-  geom_line()   # Line
+  geom_line(
+    color = "purple",
+    linetype = "dashed"
+  )   # Line
 
 gg_base +
-  geom_point()  # scatterplot
+  geom_point(color = "purple",
+             pch = 17,
+             size = 4,
+             alpha = 0.5)  # scatterplot
 
 gg_base +
-  geom_col()    # Column
+  geom_col(color = "tan2",
+           size = 1,
+           alpha = 0.5
+    
+  )    # Column
 
 gg_base +
-  geom_area()    # Area
+  geom_area( color = "coral",
+             size = 1,
+             alpha = 0.5
+    
+  )    # Area
+
+gg_base + 
+  geom_point(
+    aes(size = visitors,
+        color = visitors),
+    alpha = 0.5
+  )
+
+gg_base + 
+  geom_col(aes(fill = visitors))
 ```
 
