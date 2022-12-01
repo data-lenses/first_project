@@ -89,4 +89,25 @@ ggplot(siteyear_summary, aes(x = year, y = median_size_mm)) +
   facet_wrap(~site)
 
 ggsave(here("figures", "lobsters-col.png"))
+
+lobsters %>%
+  count(site, year)
+
+## This is the same as:
+lobsters %>%
+  group_by(site, year) %>% 
+  summarize(n = n()) %>%
+  ungroup()
+```
+Hey, we could update our RMarkdown text knowing this: There are `r count(lobsters)` total lobsters included in this summary.
+
+```{r echo=FALSE}
+# Mutate
+lobsters_detailed <- lobsters %>%
+  mutate(size_m = size_mm / 1000, 
+         millenia = 2000,
+         observer = "Allison Horst")
+
+lobsters_detailed %>%
+  select(date, site, size_m)
 ```
