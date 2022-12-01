@@ -1,0 +1,38 @@
+---
+title: "Tidy Data"
+format: html
+editor: visual
+---
+
+```{r include=FALSE, echo=FALSE}
+# Attach packages
+library(tidyverse)
+library(janitor)
+library(here)
+library(readxl)
+```
+
+```{r echo=FALSE}
+inverts <- read_excel(here("data", "inverts.xlsx"))
+
+View(inverts)
+names(inverts)
+summary(inverts)
+
+# Note: Either single-quotes, double-quotes, OR backticks around years work!
+
+inverts_long <- pivot_longer(data = inverts, 
+                                    cols = '2016':'2018',
+                                    names_to = "year",
+                                    values_to = "sp_count")
+view(inverts_long)
+
+# class(inverts_long$year)
+
+# Coerce "year" class to numeric: 
+
+inverts_long <- inverts_long %>% 
+  mutate(year = as.numeric(year))
+
+# class(inverts_long$year)
+```
