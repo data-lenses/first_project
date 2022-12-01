@@ -35,4 +35,38 @@ inverts_long <- inverts_long %>%
   mutate(year = as.numeric(year))
 
 # class(inverts_long$year)
+
+inverts_wide <- inverts_long %>% 
+  pivot_wider(names_from = common_name, 
+                     values_from = sp_count)
+inverts_wide <- inverts_wide %>% 
+  clean_names()
+
+inverts_unite <- inverts_long %>% 
+  unite(col = "site_year", # What to name the new united column
+               c(site, year), # The columns we'll unite (site, year)
+               sep = "_") # How to separate the things we're uniting
+
+inverts_moyr <- inverts_long %>% 
+  unite(col = "mo_yr", # What to name the new united column
+               c(month, year), # The columns we'll unite (site, year)
+               sep = "/")
+
+# Uniting more than 2 columns: 
+
+inverts_triple_unite <- inverts_long %>% 
+  tidyr::unite(col = "year_site_name",
+               c(year, site, common_name),
+               sep = "-") # Note: this is a dash
+
+inverts_sep <- inverts_unite %>% 
+  tidyr::separate(site_year, into = c("my_site", "my_year"))
+
+ca_abbr <- inverts %>% 
+  mutate(
+    common_name = 
+      str_replace(common_name, 
+              pattern = "california", 
+              replacement = "CA")
+  )
 ```
