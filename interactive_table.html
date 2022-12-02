@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Interactive Tables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="interactive_table_files/libs/clipboard/clipboard.min.js"></script>
+<script src="interactive_table_files/libs/quarto-html/quarto.js"></script>
+<script src="interactive_table_files/libs/quarto-html/popper.min.js"></script>
+<script src="interactive_table_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="interactive_table_files/libs/quarto-html/anchor.min.js"></script>
+<link href="interactive_table_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="interactive_table_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="interactive_table_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="interactive_table_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="interactive_table_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<script src="interactive_table_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="interactive_table_files/libs/jquery-1.11.2/jquery.min.js"></script>
+<link href="interactive_table_files/libs/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet">
+<script src="interactive_table_files/libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="interactive_table_files/libs/jquery-ui-1.11.4/jquery.ui.touch-punch.min.js"></script>
+<link href="interactive_table_files/libs/c3-0.4.11/c3.min.css" rel="stylesheet">
+<script src="interactive_table_files/libs/c3-0.4.11/c3.min.js"></script>
+<script src="interactive_table_files/libs/d3-3.5.5/d3.v3.min.js"></script>
+<link href="interactive_table_files/libs/pivottable-2.19.0/pivot.min.css" rel="stylesheet">
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/d3_renderers.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/c3_renderers.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.cs.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.da.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.de.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.es.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.fr.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.it.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.nl.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.pl.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.pt.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.ru.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.sq.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.tr.min.js"></script>
+<script src="interactive_table_files/libs/pivottable-2.19.0/pivot.zh.min.js"></script>
+<link href="interactive_table_files/libs/subtotal-1.10.0/subtotal.min.css" rel="stylesheet">
+<script src="interactive_table_files/libs/subtotal-1.10.0/subtotal.min.js"></script>
+<script src="interactive_table_files/libs/polyfill-0.1/polyfill.min.js"></script>
+<link href="interactive_table_files/libs/rpivotTable_style-0.1/rpivotTable.css" rel="stylesheet">
+<script src="interactive_table_files/libs/rpivotTable-binding-0.3.0/rpivotTable.js"></script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Interactive Tables</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="htmlwidget-1c8600b76fe002927898" style="width:100%;height:487px;" class="rpivotTable html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1c8600b76fe002927898">{"x":{"data":{"Class":["1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew"],"Sex":["Male","Male","Male","Male","Female","Female","Female","Female","Male","Male","Male","Male","Female","Female","Female","Female","Male","Male","Male","Male","Female","Female","Female","Female","Male","Male","Male","Male","Female","Female","Female","Female"],"Age":["Child","Child","Child","Child","Child","Child","Child","Child","Adult","Adult","Adult","Adult","Adult","Adult","Adult","Adult","Child","Child","Child","Child","Child","Child","Child","Child","Adult","Adult","Adult","Adult","Adult","Adult","Adult","Adult"],"Survived":["No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes"],"Freq":[0,0,35,0,0,0,17,0,118,154,387,670,4,13,89,3,5,11,13,0,1,13,14,0,57,14,75,192,140,80,76,20]},"params":{},"locale":"en","subtotals":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="cell-output-display">
+
+<div id="htmlwidget-19c96ba9913c7dfab6eb" style="width:100%;height:487px;" class="rpivotTable html-widget"></div>
+<script type="application/json" data-for="htmlwidget-19c96ba9913c7dfab6eb">{"x":{"data":{"Class":["1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew","1st","2nd","3rd","Crew"],"Sex":["Male","Male","Male","Male","Female","Female","Female","Female","Male","Male","Male","Male","Female","Female","Female","Female","Male","Male","Male","Male","Female","Female","Female","Female","Male","Male","Male","Male","Female","Female","Female","Female"],"Age":["Child","Child","Child","Child","Child","Child","Child","Child","Adult","Adult","Adult","Adult","Adult","Adult","Adult","Adult","Child","Child","Child","Child","Child","Child","Child","Child","Adult","Adult","Adult","Adult","Adult","Adult","Adult","Adult"],"Survived":["No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes","Yes"],"Freq":[0,0,35,0,0,0,17,0,118,154,387,670,4,13,89,3,5,11,13,0,1,13,14,0,57,14,75,192,140,80,76,20]},"params":{"rows":["Class","Sex"],"cols":["Age","Survived"],"aggregatorName":["Sum"],"vals":["Freq"]},"locale":"en","subtotals":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

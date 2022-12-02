@@ -1,0 +1,65 @@
+---
+title: "Filter and Join"
+format: html
+editor: visual
+---
+
+```{r echo=FALSE}
+# Attach the packages in the setup code chunk in your .qmd:
+library(tidyverse)
+library(readxl)
+library(here) 
+library(kableExtra)
+```
+
+```{r echo=FALSE}
+# Read in data: 
+fish <- read_csv(here("data", "fish.csv"))
+kelp_abur <- read_excel(here("data", "kelp.xlsx"), sheet = "abur")
+
+fish_garibaldi <- fish %>% 
+  filter(common_name == "garibaldi")
+
+fish_mohk <- fish %>% 
+  filter(site == "mohk")
+
+fish_over50 <- fish %>% 
+  filter(total_count >= 50)
+
+# The two statements below produce the same result 
+fish_3sp <- fish %>% 
+  filter(common_name == "garibaldi" | 
+           common_name == "blacksmith" | 
+           common_name == "black surfperch")
+fish_3spB <- fish %>% 
+  filter(common_name %in% c("garibaldi", "blacksmith", "black surfperch"))
+
+fish_gar_2016 <- fish %>% 
+  filter(year == 2016 | common_name == "garibaldi")
+
+aque_2018_a <- fish %>% 
+  filter(year == 2018, site == "aque")
+
+# Use the ampersand (&) to add another condition "and this must be true":
+
+aque_2018_b <- fish %>% 
+  filter(year == 2018 & site == "aque")
+
+# Written as sequential filter steps:
+
+aque_2018_c <- fish %>% 
+  filter(year == 2018) %>% 
+  filter(site == "aque")
+
+low_gb_wr <- fish %>% 
+  filter(common_name %in% c("garibaldi", "rock wrasse"), 
+         total_count <= 10)
+fish_bl <- fish %>% 
+  filter(str_detect(common_name, pattern = "black"))
+
+fish_it <- fish %>% 
+  filter(str_detect(common_name, pattern = "it"))
+
+fish_negate <- fish %>% 
+  filter(str_detect(common_name, patter = "it", negate = TRUE))
+```

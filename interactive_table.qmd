@@ -1,0 +1,18 @@
+---
+title: "Interactive Tables"
+format: html
+editor: visual
+---
+
+```{r echo=FALSE}
+library(rpivotTable)
+```
+
+```{r echo=FALSE}
+data("Titanic")
+
+rpivotTable(Titanic)
+
+rpivotTable(Titanic, rows = c("Class","Sex"), 
+            cols = c("Age","Survived"), aggregatorName = "Sum", vals = "Freq")
+```
