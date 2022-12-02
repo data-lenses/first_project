@@ -73,5 +73,12 @@ kelp_fish_left <- kelp_abur %>%
 kelp_fish_injoin <- kelp_abur %>% 
   inner_join(fish, by = c("year", "site"))
 
+my_fish_join <- fish %>% 
+  filter(year == 2017, site == "abur") %>% 
+  left_join(kelp_abur, by = c("year", "site")) %>% 
+  mutate(fish_per_frond = total_count / total_fronds)
+
+kable(my_fish_join)
+kable(fish)
 
 ```
