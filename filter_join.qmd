@@ -62,4 +62,16 @@ fish_it <- fish %>%
 
 fish_negate <- fish %>% 
   filter(str_detect(common_name, patter = "it", negate = TRUE))
+
+abur_kelp_fish <- kelp_abur %>% 
+  full_join(fish, by = c("year", "site")) 
+
+kelp_fish_left <- kelp_abur %>% 
+  left_join(fish, by = c("year","site"))
+
+# kelp_fish_injoin
+kelp_fish_injoin <- kelp_abur %>% 
+  inner_join(fish, by = c("year", "site"))
+
+
 ```
