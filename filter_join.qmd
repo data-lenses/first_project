@@ -10,6 +10,7 @@ library(tidyverse)
 library(readxl)
 library(here) 
 library(kableExtra)
+library(reprex)
 ```
 
 ```{r echo=FALSE}
@@ -80,5 +81,12 @@ my_fish_join <- fish %>%
 
 kable(my_fish_join)
 kable(fish)
+
+my_fish_join %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = "striped", 
+                full_width = FALSE)
+
+#reprex()
 
 ```
